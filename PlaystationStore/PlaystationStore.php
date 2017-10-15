@@ -33,7 +33,7 @@ class PlaystationStore
     }
     public function __get($name)
     {
-        return new $name();
+        return new $name($this->getRegion());
     }
 
     public function setRegion($region)
