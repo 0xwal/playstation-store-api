@@ -1,0 +1,17 @@
+{
+    "name": "0xwaleed/playstation-store-api",
+    "description": "Playstation store API to fetch data from the store as JSON",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "0xWaleed",
+            "email": "imwaleed@outlook.sa"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "PlaystationStore/"
+        }
+    }
+}

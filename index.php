@@ -1,8 +1,10 @@
 <?php
 
-require_once 'PlaystationStore/PlaystationStore.php';
-require_once 'PlaystationStore/Games.php';
-require_once 'PlaystationStore/PSPlus.php';
+//require_once 'PlaystationStore/PlaystationStore.php';
+//require_once 'PlaystationStore/Games.php';
+//require_once 'PlaystationStore/PSPlus.php';
+
+require_once 'vendor/autoload.php';
 
 $playstationStore = new PlaystationStore('US');
 $freeToPlay = $playstationStore->Games->freeToPlay();
