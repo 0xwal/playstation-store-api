@@ -2,10 +2,6 @@
 
 class Games extends PlaystationStore
 {
-    public function __construct($region = 'US')
-    {
-        parent::__construct($region);
-    }
 
     public function freeToPlay($start = 0, $size = 30)
     {

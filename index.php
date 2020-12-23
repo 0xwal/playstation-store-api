@@ -6,11 +6,12 @@
 
 require_once 'vendor/autoload.php';
 
-$playstationStore = new PlaystationStore('US');
-$freeToPlay = $playstationStore->Games->freeToPlay();
+$monthlyGames = (new PSPlus('gb', 'en'))->monthlyGames();
+$freeToPlay = (new Games('gb', 'en'))->freeToPlay();
+$games = array_merge($monthlyGames, $freeToPlay);
 $customData = [];
 
-foreach ($freeToPlay as $item)
+foreach ($games as $item)
 {
     $customData[] = (object)[
         'name' => $item->name,
@@ -27,6 +28,6 @@ foreach ($customData as $item) {
     echo "<br />";
     echo "Price: {$item->data->price}";
     echo "<br/>";
-    echo "<img src={$item->data->imageUrl} />";
+    echo "<img width='64' height='64' src={$item->data->imageUrl} />";
     echo "<hr />";
 }
