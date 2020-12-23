@@ -13,7 +13,7 @@ class Games extends PlaystationStore
     {
         return $this->GetDataFromStoreAsObject('STORE-MSF75508-ONLYONPSTIONPS4', $start, $size, 'games');
     }
-    public function priceDrop($start = 0, $size)
+    public function priceDrop($start, $size)
     {
         return $this->GetDataFromStoreAsObject('STORE-MSF75508-PRICEDROPSCHI', $start, $size, 'games,bundles,addons');
     }
